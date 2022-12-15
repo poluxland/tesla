@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  sucursale: one
+  unidad: MyString
+  tipo: MyString
+  contacto: MyString
+  otros: MyString
+  codigo: MyString
+  observaciones: MyString
+
+two:
+  sucursale: two
+  unidad: MyString
+  tipo: MyString
+  contacto: MyString
+  otros: MyString
+  codigo: MyString
+  observaciones: MyString

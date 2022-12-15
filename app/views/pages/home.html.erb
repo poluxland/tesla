@@ -80,41 +80,54 @@
   <div class="album py-5 bg-light">
     <div class="container">
 
+
+
+
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-3">
+
+
         <div class="col">
+        <a href="<%= clientes_path %>">
           <div class="card shadow zoom h-100">
-            <%= image_tag ("1.jpg")%>
+            <%= image_tag ("1.jpg") , :class => "card-img-top img-top"%>
             <div class="card-img-overlay">
               <h2 class="text-light ">Clientes</h2>
             </div>
           </div>
+          </a>
         </div>
 
          <div class="col">
+         <a href="<%= sucursales_path %>">
           <div class="card shadow zoom h-100">
-            <%= image_tag ("3.jpg")%>
+            <%= image_tag ("3.jpg") , :class => "card-img-top img-top"%>
             <div class="card-img-overlay">
-              <h2 class="text-light ">Sucursal</h2>
+              <h2 class="text-light ">Sucursales</h2>
             </div>
           </div>
+          </a>
         </div>
 
          <div class="col">
+         <a href="<%= equipos_path %>">
           <div class="card shadow zoom h-100">
-            <%= image_tag ("2.jpg")%>
+            <%= image_tag ("2.jpg") , :class => "card-img-top img-top"%>
             <div class="card-img-overlay">
               <h2 class="text-light ">Equipos</h2>
             </div>
           </div>
+          </a>
         </div>
 
          <div class="col">
+         <a href="<%= root_path %>">
           <div class="card shadow zoom h-100">
-            <%= image_tag ("5.png")%>
+            <%= image_tag ("5.png") , :class => "card-img-top img-top"%>
             <div class="card-img-overlay">
               <h2 class="text-light ">Servicios</h2>
             </div>
           </div>
+          </a>
         </div>
 
 
