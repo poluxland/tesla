@@ -13,7 +13,8 @@
 
   <div>
     <%= form.label :cliente_id, style: "display: block" %>
-    <%= form.text_field :cliente_id %>
+    <%= form.select :cliente_id, collection: Cliente.all.map { |r| [r.nombre, r.id] } %>
+
   </div>
 
   <div>

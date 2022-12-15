@@ -13,7 +13,8 @@
 
   <div>
     <%= form.label :sucursale_id, style: "display: block" %>
-    <%= form.text_field :sucursale_id %>
+
+    <%= form.select :sucursale_id, collection: Sucursale.all.map { |r| [r.nombre, r.id] } %>
   </div>
 
   <div>
