@@ -1,14 +1,8 @@
 <p style="color: green"><%= notice %></p>
 
+
 <h1>Reportes</h1>
 
-<div id="reportes">
-  <% @reportes.each do |reporte| %>
-    <%= render reporte %>
-    <p>
-      <%= link_to "Show this reporte", reporte %>
-    </p>
-  <% end %>
-</div>
+<%= render "table", reporte: @reporte %>
 
-<%= link_to "New reporte", new_reporte_path %>
+<%= link_to "Nuevo reporte", new_reporte_path, class: "btn btn-primary shadow" %>

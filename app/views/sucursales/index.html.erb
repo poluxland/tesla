@@ -2,13 +2,7 @@
 
 <h1>Sucursales</h1>
 
-<div id="sucursales">
-  <% @sucursales.each do |sucursale| %>
-    <%= render sucursale %>
-    <p>
-      <%= link_to "Show this sucursale", sucursale %>
-    </p>
-  <% end %>
-</div>
 
-<%= link_to "New sucursale", new_sucursale_path %>
+<%= render "table", sucursale: @sucursale %>
+
+<%= link_to "Nueva sucursal", new_sucursale_path, class: "btn btn-primary shadow" %>

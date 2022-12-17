@@ -1,10 +1,17 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render @reporte %>
 
-<div>
-  <%= link_to "Edit this reporte", edit_reporte_path(@reporte) %> |
-  <%= link_to "Back to reportes", reportes_path %>
+<div class="container">
+    <%= render @reporte %>
+</div>
 
-  <%= button_to "Destroy this reporte", @reporte, method: :delete %>
+
+<div class="botones">
+  <div class="d-flex justify-content-center">
+  <%#= link_to "Edit this reporte", edit_reporte_path(@reporte), class: "btn btn-primary shadow" %>&nbsp;
+
+  <%#= link_to 'Volver', servicios_path, class: "btn btn-primary shadow" %>   &nbsp;
+  <%= link_to "Imprimir", '#', class: "btn btn-primary shadow", onclick: "printpage()" %>
+
+  </div>
 </div>

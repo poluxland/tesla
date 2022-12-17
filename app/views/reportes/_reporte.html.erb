@@ -1,422 +1,343 @@
-<div id="<%= dom_id reporte %>">
-  <p>
-    <strong>Cliente:</strong>
-    <%= reporte.cliente_id %>
-  </p>
-
-  <p>
-    <strong>Sucursale:</strong>
-    <%= reporte.sucursale_id %>
-  </p>
-
-  <p>
-    <strong>Equipo:</strong>
-    <%= reporte.equipo_id %>
-  </p>
-
-  <p>
-    <strong>Enchufes:</strong>
-    <%= reporte.enchufes %>
-  </p>
-
-  <p>
-    <strong>Cables:</strong>
-    <%= reporte.cables %>
-  </p>
-
-  <p>
-    <strong>Conecciones:</strong>
-    <%= reporte.conecciones %>
-  </p>
-
-  <p>
-    <strong>Estructura:</strong>
-    <%= reporte.estructura %>
-  </p>
-
-  <p>
-    <strong>Corrosion:</strong>
-    <%= reporte.corrosion %>
-  </p>
-
-  <p>
-    <strong>Bases:</strong>
-    <%= reporte.bases %>
-  </p>
-
-  <p>
-    <strong>Ventiladores:</strong>
-    <%= reporte.ventiladores %>
-  </p>
-
-  <p>
-    <strong>Condensador:</strong>
-    <%= reporte.condensador %>
-  </p>
-
-  <p>
-    <strong>Compresor:</strong>
-    <%= reporte.compresor %>
-  </p>
-
-  <p>
-    <strong>Evaporador:</strong>
-    <%= reporte.evaporador %>
-  </p>
-
-  <p>
-    <strong>Linea refrigerante:</strong>
-    <%= reporte.linea_refrigerante %>
-  </p>
-
-  <p>
-    <strong>Aislacion:</strong>
-    <%= reporte.aislacion %>
-  </p>
-
-  <p>
-    <strong>Correas:</strong>
-    <%= reporte.correas %>
-  </p>
-
-  <p>
-    <strong>Lubricacion:</strong>
-    <%= reporte.lubricacion %>
-  </p>
-
-  <p>
-    <strong>Filtro de aire:</strong>
-    <%= reporte.filtro_de_aire %>
-  </p>
-
-  <p>
-    <strong>Carcasa:</strong>
-    <%= reporte.carcasa %>
-  </p>
-
-  <p>
-    <strong>Partida normal:</strong>
-    <%= reporte.partida_normal %>
-  </p>
-
-  <p>
-    <strong>Vibraciones y ruido:</strong>
-    <%= reporte.vibraciones_y_ruido %>
-  </p>
-
-  <p>
-    <strong>Luces e indicadores:</strong>
-    <%= reporte.luces_e_indicadores %>
-  </p>
-
-  <p>
-    <strong>Direccion de ventiladores:</strong>
-    <%= reporte.direccion_de_ventiladores %>
-  </p>
-
-  <p>
-    <strong>Nivel de aceite:</strong>
-    <%= reporte.nivel_de_aceite %>
-  </p>
-
-  <p>
-    <strong>Nivel de refrigerante:</strong>
-    <%= reporte.nivel_de_refrigerante %>
-  </p>
-
-  <p>
-    <strong>Pruebas de funcionamiento:</strong>
-    <%= reporte.pruebas_de_funcionamiento %>
-  </p>
-
-  <p>
-    <strong>Alarmas:</strong>
-    <%= reporte.alarmas %>
-  </p>
-
-  <p>
-    <strong>Sobrecalor:</strong>
-    <%= reporte.sobrecalor %>
-  </p>
-
-  <p>
-    <strong>Sobrecalentamiento:</strong>
-    <%= reporte.sobrecalentamiento %>
-  </p>
-
-  <p>
-    <strong>Presion de succion:</strong>
-    <%= reporte.presion_de_succion %>
-  </p>
-
-  <p>
-    <strong>Presion de descarga:</strong>
-    <%= reporte.presion_de_descarga %>
-  </p>
-
-  <p>
-    <strong>Tarjeta de control:</strong>
-    <%= reporte.tarjeta_de_control %>
-  </p>
-
-  <p>
-    <strong>Compresor f1:</strong>
-    <%= reporte.compresor_f1 %>
-  </p>
-
-  <p>
-    <strong>Compresor f2:</strong>
-    <%= reporte.compresor_f2 %>
-  </p>
-
-  <p>
-    <strong>Compresor f3:</strong>
-    <%= reporte.compresor_f3 %>
-  </p>
-
-  <p>
-    <strong>Compresor m:</strong>
-    <%= reporte.compresor_m %>
-  </p>
-
-  <p>
-    <strong>Ventilador compresor f1:</strong>
-    <%= reporte.ventilador_compresor_f1 %>
-  </p>
-
-  <p>
-    <strong>Ventilador compresor f2:</strong>
-    <%= reporte.ventilador_compresor_f2 %>
-  </p>
-
-  <p>
-    <strong>Ventilador compresor f3:</strong>
-    <%= reporte.ventilador_compresor_f3 %>
-  </p>
-
-  <p>
-    <strong>Ventilador compresor m:</strong>
-    <%= reporte.ventilador_compresor_m %>
-  </p>
-
-  <p>
-    <strong>Ventilador evaporador inyeccion f1:</strong>
-    <%= reporte.ventilador_evaporador_inyeccion_f1 %>
-  </p>
-
-  <p>
-    <strong>Ventilador evaporador inyeccion f2:</strong>
-    <%= reporte.ventilador_evaporador_inyeccion_f2 %>
-  </p>
-
-  <p>
-    <strong>Ventilador evapodar f3:</strong>
-    <%= reporte.ventilador_evapodar_f3 %>
-  </p>
-
-  <p>
-    <strong>Ventilador evaporador m:</strong>
-    <%= reporte.ventilador_evaporador_m %>
-  </p>
-
-  <p>
-    <strong>Ventilador retorno f1:</strong>
-    <%= reporte.ventilador_retorno_f1 %>
-  </p>
-
-  <p>
-    <strong>Ventilador retorno f2:</strong>
-    <%= reporte.ventilador_retorno_f2 %>
-  </p>
-
-  <p>
-    <strong>Ventilador retorno f3:</strong>
-    <%= reporte.ventilador_retorno_f3 %>
-  </p>
-
-  <p>
-    <strong>Ventilador retorno m:</strong>
-    <%= reporte.ventilador_retorno_m %>
-  </p>
-
-  <p>
-    <strong>Calefactor f1:</strong>
-    <%= reporte.calefactor_f1 %>
-  </p>
-
-  <p>
-    <strong>Calefactor f2:</strong>
-    <%= reporte.calefactor_f2 %>
-  </p>
-
-  <p>
-    <strong>Calefactor f3:</strong>
-    <%= reporte.calefactor_f3 %>
-  </p>
-
-  <p>
-    <strong>Calefactor m:</strong>
-    <%= reporte.calefactor_m %>
-  </p>
-
-  <p>
-    <strong>Cable poder f1:</strong>
-    <%= reporte.cable_poder_f1 %>
-  </p>
-
-  <p>
-    <strong>Cable poder f2:</strong>
-    <%= reporte.cable_poder_f2 %>
-  </p>
-
-  <p>
-    <strong>Cable poder f3:</strong>
-    <%= reporte.cable_poder_f3 %>
-  </p>
-
-  <p>
-    <strong>Cable poder m:</strong>
-    <%= reporte.cable_poder_m %>
-  </p>
-
-  <p>
-    <strong>Tension total f1:</strong>
-    <%= reporte.tension_total_f1 %>
-  </p>
-
-  <p>
-    <strong>Tension total f2:</strong>
-    <%= reporte.tension_total_f2 %>
-  </p>
-
-  <p>
-    <strong>Tension total f3:</strong>
-    <%= reporte.tension_total_f3 %>
-  </p>
-
-  <p>
-    <strong>Tension total m:</strong>
-    <%= reporte.tension_total_m %>
-  </p>
-
-  <p>
-    <strong>Detalle:</strong>
-    <%= reporte.detalle %>
-  </p>
-
-  <p>
-    <strong>Insumos repuestos:</strong>
-    <%= reporte.insumos_repuestos %>
-  </p>
-
-  <p>
-    <strong>Firma solicitante:</strong>
-    <%= reporte.firma_solicitante %>
-  </p>
-
-  <p>
-    <strong>Firma tecnico:</strong>
-    <%= reporte.firma_tecnico %>
-  </p>
-
-  <p>
-    <strong>Imagen 1:</strong>
-    <%= reporte.imagen_1 %>
-  </p>
-
-  <p>
-    <strong>Imagen 2:</strong>
-    <%= reporte.imagen_2 %>
-  </p>
-
-  <p>
-    <strong>Imagen 3:</strong>
-    <%= reporte.imagen_3 %>
-  </p>
-
-  <p>
-    <strong>Coigo qr:</strong>
-    <%= reporte.coigo_qr %>
-  </p>
-
-  <p>
-    <strong>Otros:</strong>
-    <%= reporte.otros %>
-  </p>
-
-  <p>
-    <strong>Fecha:</strong>
-    <%= reporte.fecha %>
-  </p>
-
-  <p>
-    <strong>Servicio:</strong>
-    <%= reporte.servicio %>
-  </p>
-
-  <p>
-    <strong>Chiller presion agua:</strong>
-    <%= reporte.chiller_presion_agua %>
-  </p>
-
-  <p>
-    <strong>Chiller presion agua retorno:</strong>
-    <%= reporte.chiller_presion_agua_retorno %>
-  </p>
-
-  <p>
-    <strong>Chiller t agua suministrada:</strong>
-    <%= reporte.chiller_t_agua_suministrada %>
-  </p>
-
-  <p>
-    <strong>Chiller t agua retorno:</strong>
-    <%= reporte.chiller_t_agua_retorno %>
-  </p>
-
-  <p>
-    <strong>Chiller caudal suministrado:</strong>
-    <%= reporte.chiller_caudal_suministrado %>
-  </p>
-
-  <p>
-    <strong>Chiller caudal retorno:</strong>
-    <%= reporte.chiller_caudal_retorno %>
-  </p>
-
-  <p>
-    <strong>A1:</strong>
-    <%= reporte.a1 %>
-  </p>
-
-  <p>
-    <strong>A2:</strong>
-    <%= reporte.a2 %>
-  </p>
-
-  <p>
-    <strong>A3:</strong>
-    <%= reporte.a3 %>
-  </p>
-
-  <p>
-    <strong>A4:</strong>
-    <%= reporte.a4 %>
-  </p>
-
-  <p>
-    <strong>B1:</strong>
-    <%= reporte.b1 %>
-  </p>
-
-  <p>
-    <strong>B2:</strong>
-    <%= reporte.b2 %>
-  </p>
-
-  <p>
-    <strong>B3:</strong>
-    <%= reporte.b3 %>
-  </p>
+
+<div class="invoice-box" style="min-height:900px;">
+  <table cellpadding="0" cellspacing="0">
+    <tr class="top">
+      <td colspan="4">
+        <table>
+          <tr><td class="title"><img src="/logo.svg" style="width:100%; max-width:80px;"></td>
+            <td>
+        </table>
+      </td>
+    </tr>
+    <tr class="information">
+      <td colspan="4">
+        <table>
+          <tr>
+            <td>Tesla<br> Almirante Barroso 640<br> Valparaiso</td>
+            <td>+56 3 2259 1548 <i class="fas fa-phone-square-alt"></i>
+            <br>info@tesla.cl <i class="fas fa-phone-square-alt"></i>
+            <br>Otros <i class="fas fa-phone-square-alt"></i>
+            <br></td>
+          </tr>
+        </table>
+        <h2>Servicio Nº <%= reporte.id %> <br> </h2><br>
+      </td>
+    </tr>
+    <tr class="heading">
+      <td>Cliente</td>
+      <td>Fecha</td>
+      <td>Serie equipo</td>
+      <td>Actualización</td>
+    </tr>
+
+    <tr>
+      <td><%= reporte.cliente.nombre %></td>
+      <td><%= reporte.fecha %></td>
+      <td><%= reporte.equipo %></td>
+      <td></td>
+    </tr>
+
+    </table>
+    <table>
+    <br>
+    <tr class="heading">
+      <td>Chequeo estatico</td>
+      <td>Estado</td>
+      <td>Chequeo dinamico</td>
+      <td>Estado</td>
+    </tr>
+    <tr class="item">
+      <td >Enchufes</td>
+      <td><%= reporte.enchufes %></td>
+      <td>Partida normal:</td>
+      <td><%= reporte.partida_normal %></td>
+    </tr>
+    <tr class="item">
+      <td>Cables</td>
+      <td><%= reporte.cables %></td>
+      <td>Vibraciones y ruido:</td>
+      <td><%= reporte.vibraciones_y_ruido %></td>
+    </tr>
+    <tr class="item">
+      <td>Conecciones:</td>
+      <td><%= reporte.conecciones %></td>
+      <td>Luces e indicacdores:</td>
+      <td><%= reporte.luces_e_indicadores %></td>
+    </tr>
+    <tr class="item">
+      <td>Estructura:</td>
+      <td><%= reporte.estructura %></td>
+      <td>Direccion de ventiladores:</td>
+      <td><%= reporte.direccion_de_ventiladores %></td>
+    </tr>
+    <tr class="item">
+      <td>Corrosion:</td>
+      <td><%= reporte.corrosion %></td>
+      <td>Nivel de aceite:</td>
+      <td><%= reporte.nivel_de_aceite %></td>
+    </tr>
+    <tr class="item">
+      <td>Bases:</td>
+      <td><%= reporte.bases %></td>
+      <td>Nivel de refrigerante:</td>
+      <td><%= reporte.nivel_de_refrigerante %></td>
+    </tr>
+    <tr class="item">
+      <td>Ventiladores:</td>
+      <td><%= reporte.ventiladores %></td>
+      <td>Pruebas de funcionamiento:</td>
+      <td><%= reporte.pruebas_de_funcionamiento %></td>
+    </tr>
+    <tr class="item">
+      <td>Condensador:</td>
+      <td><%= reporte.condensador %></td>
+      <td>Alarmas:</td>
+      <td><%= reporte.alarmas %></td>
+    </tr>
+    <tr class="item">
+      <td>Compresor:</td>
+      <td><%= reporte.compresor %></td>
+      <td>Sobrecalor:</td>
+      <td><%= reporte.sobrecalor %></td>
+    </tr>
+    <tr class="item">
+      <td>Evapodador:</td>
+      <td><%= reporte.evaporador %></td>
+      <td>Presion de succion:</td>
+      <td><%= reporte.presion_de_succion %></td>
+    </tr>
+    <tr class="item">
+      <td>Linea refrigetante:</td>
+      <td><%= reporte.linea_refrigerante %></td>
+      <td>Sobrecalentamiento:</td>
+      <td><%= reporte.sobrecalentamiento %></td>
+    </tr>
+    <tr class="item">
+      <td>Aislacion:</td>
+      <td><%= reporte.aislacion %></td>
+      <td>Presion de descarga:</td>
+      <td><%= reporte.presion_de_descarga %></td>
+    </tr>
+    <tr class="item">
+      <td>Correas:</td>
+      <td><%= reporte.correas %></td>
+      <td>Tarjeta de control:</td>
+      <td><%= reporte.tarjeta_de_control %></td>
+    </tr>
+    <tr class="item">
+      <td>Lubricacion:</td>
+      <td><%= reporte.lubricacion %></td>
+    </tr>
+    <tr class="item">
+      <td>Drenajes:</td>
+      <td><%= reporte.id %></td>
+
+
+
+    </tr>
+    <tr class="item">
+      <td>Filtro de aire:</td>
+      <td><%= reporte.filtro_de_aire %></td>
+
+
+    </tr>
+    <tr class="item">
+      <td>Carcasa:</td>
+      <td><%= reporte.carcasa %></td>
+    </tr>
+
+    <tr class="heading">
+      <td>Parametros de lectura</td>
+      <td>F1</td>
+      <td>F2</td>
+      <td>F3</td>
+    </tr>
+
+    <tr class="item">
+      <td>Compresor<%= reporte.compresor_f1 %></td>
+      <td><%= reporte.compresor_f2 %></td>
+      <td><%= reporte.compresor_f3 %></td>
+      <td><%= reporte.compresor_m %></td>
+    </tr>
+    <tr class="item">
+      <td>Ventilador compresor<%= reporte.ventilador_compresor_f1 %></td>
+      <td><%= reporte.ventilador_compresor_f2 %></td>
+      <td><%= reporte.ventilador_compresor_f3 %></td>
+      <td><%= reporte.ventilador_compresor_m %></td>
+    </tr>
+    <tr class="item">
+      <td>Ventilador evaporador<%= reporte.ventilador_evaporador_inyeccion_f1 %></td>
+      <td><%= reporte.ventilador_evaporador_inyeccion_f2 %></td>
+      <td><%= reporte.ventilador_evapodar_f3 %></td>
+      <td><%= reporte.ventilador_evaporador_m %></td>
+    </tr>
+    <tr class="item">
+      <td>Ventilador retorno<%= reporte.ventilador_retorno_f1 %></td>
+      <td><%= reporte.ventilador_retorno_f2 %></td>
+      <td><%= reporte.ventilador_retorno_f3 %></td>
+      <td><%= reporte.ventilador_retorno_m %></td>
+    </tr>
+    <tr class="item">
+      <td>Calefactor<%= reporte.calefactor_f1 %></td>
+      <td><%= reporte.calefactor_f2 %></td>
+      <td><%= reporte.calefactor_f3 %></td>
+      <td><%= reporte.calefactor_m %></td>
+    </tr>
+    <tr class="item">
+      <td>Tension total<%= reporte.tension_total_f1 %></td>
+      <td><%= reporte.tension_total_f2 %></td>
+      <td><%= reporte.tension_total_f3 %></td>
+      <td><%= reporte.tension_total_m %></td>
+
+    </tr>
+
+
+
+<!--
+    <tr class="heading"><td colspan="4">Observaciones</td></tr>
+    <tr class="details">
+    </tr>
+      <br>
+      <tr class="item">
+        <td>Imagen 1<%= reporte.imagen_1 %></td>
+        <td>Imagen 2<%= reporte.imagen_2 %></td>
+        <td>Imagen 3<%= reporte.imagen_3 %></td>
+        <td>Codigo QR<%= reporte.coigo_qr %></td>
+
+      </tr>
+      <tr class="item">
+        <td>Otros<%= reporte.otros %></td>
+        <td><%= reporte.detalle %></td>
+        <td><%= reporte.insumos_repuestos %></td>
+        <td><%= reporte.firma_solicitante %></td>
+
+
+      </tr>
+      <td><%= reporte.firma_tecnico %></td>
+      <td><%= reporte.servicio %></td>
+      <tr class="item">
+
+//-->
+      </tr>
+
+
 
 </div>
+
+  </table>
+<br>
+
+<style>
+
+    .invoice-box {
+    max-width: 900px;
+    margin: auto;
+    padding: 30px;
+    border: 1px solid #eee;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .15);
+    font-size: 14px;
+
+    color: #555;
+  }
+
+  .invoice-box table {
+    width: 100%;
+    line-height: inherit;
+    text-align: left;
+  }
+
+  .invoice-box table tr td:nth-child(n+2) {
+    text-align: right;
+  }
+
+  .invoice-box table tr.top table td {
+    padding-bottom: 20px;
+  }
+
+  .invoice-box table tr.information table td {
+    padding-bottom: 40px;
+  }
+
+  .invoice-box table tr.heading td {
+    background: #eee;
+    border-bottom: 1px solid #ddd;
+    font-weight: bold;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .invoice-box table tr.top table td {
+        width: 100%;
+        display: block;
+        text-align: center;
+    }
+
+    .invoice-box table tr.information table td {
+        width: 100%;
+        display: block;
+        text-align: center;
+    }
+  }
+
+    @media print {
+      .noprint,.botones, .alert, .header
+       {
+        display: none !important;
+      }
+
+
+    .invoice-box {
+      max-width: 900px !important;
+      margin: auto !important;
+      padding: 30px !important;
+      border: 1px solid #eee !important;
+      box-shadow: 0 0 10px rgba(0, 0, 0, .15) !important;
+      font-size: 14px;
+
+      color: #555 !important;
+      -webkit-print-color-adjust: exact !important;
+    }
+
+    .invoice-box table {
+      width: 100%;
+      line-height: inherit !important;
+      text-align: left !important;
+      -webkit-print-color-adjust: exact !important;
+    }
+
+
+
+    .invoice-box table tr td:nth-child(n+2) {
+      text-align: right !important;
+      -webkit-print-color-adjust: exact !important;
+    }
+
+    .invoice-box table tr.top table td {
+      padding-bottom: 20px !important;
+      -webkit-print-color-adjust: exact !important;
+    }
+
+
+
+    .invoice-box table tr.information table td {
+      padding-bottom: 40px !important;
+      -webkit-print-color-adjust: exact !important;
+    }
+
+    .invoice-box table tr.heading td {
+      background: #eee !important;
+      border-bottom: 1px solid #ddd !important;
+      font-weight: bold !important;
+      -webkit-print-color-adjust: exact !important;
+    }
+
+
+  }
+</style>
+
+<script>
+  function printpage()
+  {
+     window.print()
+  }
+
+</script>

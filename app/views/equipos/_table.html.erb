@@ -1,0 +1,36 @@
+ <table id="myTable" class="table table-responsive table-bordered table-sm table-hover shadow" cellspacing="0" width="100%">
+  <thead>
+    <tr>
+      <th>Cliente</th>
+      <th>Sucursal</th>
+      <th>Unidad</th>
+      <th>Tipo</th>
+      <th>Contacto</th>
+
+      <th>Creado</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @equipos.each do |equipo| %>
+      <tr>
+        <td><%= equipo.sucursale.cliente.nombre %></td>
+        <td><%= equipo.sucursale.nombre %></td>
+        <td><%= equipo.unidad %></td>
+        <td><%= equipo.tipo %></td>
+        <td><%= equipo.contacto %></td>
+
+
+
+        <td><%= equipo.created_at.strftime("%m/%d/%y") %></td>
+        <td class="text-center">
+
+          <%= link_to '', equipo, class: 'btn btn-sm btn-secondary command-edit shadow p-1 rounded bi bi-pencil-square'%>
+          <%= link_to '', edit_equipo_path(equipo), class: "btn btn-sm btn-primary command-delete shadow p-1 rounded bi-binoculars-fill" %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<br>

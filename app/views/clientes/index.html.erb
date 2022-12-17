@@ -2,13 +2,8 @@
 
 <h1>Clientes</h1>
 
-<div id="clientes">
-  <% @clientes.each do |cliente| %>
-    <%= render cliente %>
-    <p>
-      <%= link_to "Show this cliente", cliente %>
-    </p>
-  <% end %>
-</div>
 
-<%= link_to "New cliente", new_cliente_path %>
+
+<%= render "table", cliente: @cliente %>
+
+<%= link_to "Nuevo cliente", new_cliente_path, class: "btn btn-primary shadow" %>

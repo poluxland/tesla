@@ -1,0 +1,28 @@
+ <table id="myTable" class="table table-responsive table-bordered table-sm table-hover shadow" cellspacing="0" width="100%">
+  <thead>
+    <tr>
+      <th>Rut</th>
+      <th>Nombre</th>
+      <th>Dirección</th>
+      <th>Creado</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @clientes.each do |cliente| %>
+      <tr>
+        <td><%= cliente.rut %></td>
+        <td><%= cliente.nombre %></td>
+        <td><%= cliente.direccion %></td>
+        <td><%= cliente.created_at.strftime("%m/%d/%y") %></td>
+        <td class="text-center">
+
+          <%= link_to '', cliente, class: 'btn btn-sm btn-secondary command-edit shadow p-1 rounded bi bi-pencil-square'%>
+          <%= link_to '', edit_cliente_path(cliente), class: "btn btn-sm btn-primary command-delete shadow p-1 rounded bi-binoculars-fill" %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<br>
