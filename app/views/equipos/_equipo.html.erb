@@ -1,21 +1,41 @@
 <div id="<%= dom_id equipo %>">
-    <strong>Rut:</strong>
-    <%= equipo.sucursale.cliente.rut %><br>
-     <strong>Nombre cliente:</strong>
-    <%= equipo.sucursale.cliente.nombre %><br>
-     <strong>Sucursal:</strong>
-    <%= equipo.sucursale.nombre %><br>
-    <strong>Unidad:</strong>
-    <%= equipo.unidad %><br>
-    <strong>Tipo:</strong>
-    <%= equipo.tipo %><br>
-    <strong>Contacto:</strong>
-    <%= equipo.contacto %><br>
-    <strong>Otros:</strong>
-    <%= equipo.otros %><br>
-    <strong>Codigo:</strong>
-    <%= equipo.codigo %><br>
-    <strong>Observaciones:</strong>
-    <%= equipo.observaciones %><br>
-</div>
-<button type="button" class="btn btn-primary">Nuevo reporte de este equipo</button>
+<h1>Detalle de equipo</h1>
+<table id="myTable" class="table table-responsive table-bordered table-sm table-hover shadow" cellspacing="0" width="100%">
+  <thead>
+    <tr>
+      <th>Rut</th>
+      <th>Nombre cliente</th>
+      <th>Sucursal</th>
+      <th>Unidad</th>
+      <th>Tipo</th>
+      <th>Contacto</th>
+      <th>Otros</th>
+      <th>Codigo</th>
+      <th>Creado</th>
+      <th>Observaciones</th>
+    </tr>
+  </thead>
+
+  <tbody>
+      <tr>
+
+        <td><%= equipo.sucursale.cliente.rut %></td>
+        <td><%= equipo.sucursale.nombre %></td>
+        <td><%= equipo.unidad  %></td>
+        <td><%= equipo.tipo %></td>
+        <td><%= equipo.contacto %></td>
+        <td><%= equipo.otros %></td>
+        <td><%= equipo.codigo %></td>
+        <td><%= equipo.created_at.strftime("%m/%d/%y") %></td>
+         <td><%= equipo.observaciones %></td>
+        <td class="text-center">
+        </td>
+      </tr>
+
+  </tbody>
+</table>
+
+
+<button type="button" class="btn btn-primary">Nuevo reporte para este equipo</button>
+
+
