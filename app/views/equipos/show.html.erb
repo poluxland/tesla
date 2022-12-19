@@ -3,8 +3,11 @@
 <%= render @equipo %>
 
 <div>
-  <%= link_to "Edit this equipo", edit_equipo_path(@equipo) %> |
-  <%= link_to "Back to equipos", equipos_path %>
-
-  <%= button_to "Destroy this equipo", @equipo, method: :delete %>
+  <%#= link_to "Edit this equipo", edit_equipo_path(@equipo) %>
+  <%#= link_to "Back to equipos", equipos_path %>
+  <%#= button_to "Destroy this equipo", @equipo, method: :delete %>
 </div>
+
+<br>
+<%= render_qr_code("").html_safe %>
+

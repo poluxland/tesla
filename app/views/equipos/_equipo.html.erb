@@ -1,37 +1,21 @@
 <div id="<%= dom_id equipo %>">
-  <p>
-    <strong>Sucursale:</strong>
-    <%= equipo.sucursale_id %>
-  </p>
-
-  <p>
+    <strong>Rut:</strong>
+    <%= equipo.sucursale.cliente.rut %><br>
+     <strong>Nombre cliente:</strong>
+    <%= equipo.sucursale.cliente.nombre %><br>
+     <strong>Sucursal:</strong>
+    <%= equipo.sucursale.nombre %><br>
     <strong>Unidad:</strong>
-    <%= equipo.unidad %>
-  </p>
-
-  <p>
+    <%= equipo.unidad %><br>
     <strong>Tipo:</strong>
-    <%= equipo.tipo %>
-  </p>
-
-  <p>
+    <%= equipo.tipo %><br>
     <strong>Contacto:</strong>
-    <%= equipo.contacto %>
-  </p>
-
-  <p>
+    <%= equipo.contacto %><br>
     <strong>Otros:</strong>
-    <%= equipo.otros %>
-  </p>
-
-  <p>
+    <%= equipo.otros %><br>
     <strong>Codigo:</strong>
-    <%= equipo.codigo %>
-  </p>
-
-  <p>
+    <%= equipo.codigo %><br>
     <strong>Observaciones:</strong>
-    <%= equipo.observaciones %>
-  </p>
-
+    <%= equipo.observaciones %><br>
 </div>
+<button type="button" class="btn btn-primary">Nuevo reporte de este equipo</button>
