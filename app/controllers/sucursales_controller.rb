@@ -1,5 +1,6 @@
 class SucursalesController < ApplicationController
   before_action :set_sucursale, only: %i[ show edit update destroy ]
+  rescue_from ActiveRecord::InvalidForeignKey, with: :invalid_foreign_key
 
   # GET /sucursales or /sucursales.json
   def index
@@ -12,6 +13,7 @@ class SucursalesController < ApplicationController
 
   # GET /sucursales/new
   def new
+    @cliente = Cliente.find(params[:cliente_id])
     @sucursale = Sucursale.new
   end
 
@@ -21,24 +23,22 @@ class SucursalesController < ApplicationController
 
   # POST /sucursales or /sucursales.json
   def create
+    @cliente = Cliente.find(params[:cliente_id])
     @sucursale = Sucursale.new(sucursale_params)
-
-    respond_to do |format|
-      if @sucursale.save
-        format.html { redirect_to sucursale_url(@sucursale), notice: "Sucursale was successfully created." }
-        format.json { render :show, status: :created, location: @sucursale }
-      else
-        format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @sucursale.errors, status: :unprocessable_entity }
-      end
+    @sucursale.cliente = @cliente
+    if @sucursale.save
+      redirect_to cliente_path(@cliente)
+    else
+      render :new
     end
+
   end
 
   # PATCH/PUT /sucursales/1 or /sucursales/1.json
   def update
     respond_to do |format|
       if @sucursale.update(sucursale_params)
-        format.html { redirect_to sucursale_url(@sucursale), notice: "Sucursale was successfully updated." }
+        format.html { redirect_to cliente_path(@sucursale.cliente), notice: "Sucursal actualizada." }
         format.json { render :show, status: :ok, location: @sucursale }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -49,12 +49,9 @@ class SucursalesController < ApplicationController
 
   # DELETE /sucursales/1 or /sucursales/1.json
   def destroy
-    @sucursale.destroy
 
-    respond_to do |format|
-      format.html { redirect_to sucursales_url, notice: "Sucursale was successfully destroyed." }
-      format.json { head :no_content }
-    end
+    @sucursale.destroy
+      redirect_to cliente_path(@sucursale.cliente), notice: "Sucursal eliminada."
   end
 
   private
@@ -66,5 +63,9 @@ class SucursalesController < ApplicationController
     # Only allow a list of trusted parameters through.
     def sucursale_params
       params.require(:sucursale).permit(:cliente_id, :nombre, :direccion, :contacto)
+    end
+
+    def invalid_foreign_key
+      redirect_to cliente_path(@sucursale.cliente), notice: "Sucursal tiene equipos."
     end
 end
