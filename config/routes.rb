@@ -12,4 +12,5 @@ resources :sucursales, only: %i[destroy show edit update]
 
   # Defines the root path route ("/")
   root "pages#home"
+  get 'graficos', to: 'pages#graficos'
 end

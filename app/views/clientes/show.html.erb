@@ -1,25 +1,41 @@
 <p style="color: green"><%= notice %></p>
-
+<h2>Cliente</h2>
 <%= render @cliente %>
-
+<%= link_to "Editar cliente", edit_cliente_path(@cliente), class: "btn btn-primary shadow" %>
+<br>
+<br>
 <h2>Sucursales</h2>
-<% @cliente.sucursale.each do |sucursale| %>
-  <%= sucursale.nombre %>
-  <%= link_to "Eliminar", sucursale_path(sucursale), data: {turbo_method: :delete, turbo_confirm: "Esta seguro?"}%>
-  <%= link_to "Editar", edit_sucursale_path(sucursale) %>
+<table id="myTable" class="table table-responsive table-bordered table-sm table-hover shadow" cellspacing="0" width="100%">
+  <thead>
+    <tr>
 
-  <br>
-<% end %>
+      <th>Nombre</th>
+      <th>Dirección</th>
+      <th>Contacto</th>
+      <th>Creado</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
 
+  <tbody>
+    <% @cliente.sucursale.each do |sucursale| %>
+      <tr>
+
+        <td><%= sucursale.nombre %></td>
+        <td><%= sucursale.direccion %></td>
+        <td><%= sucursale.contacto %></td>
+        <td><%= sucursale.created_at.strftime("%m/%d/%y") %></td>
+        <td class="text-center">
+
+          <%= link_to "", sucursale_path(sucursale), data: {turbo_method: :delete, turbo_confirm: "Esta seguro?"}, class: 'btn btn-sm btn-danger command-edit shadow p-1 rounded bi-trash'%>
+          <%= link_to "", edit_sucursale_path(sucursale), class: "btn btn-sm btn-primary command-delete shadow p-1 rounded bi bi-pencil-square" %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
 <br>
 <br>
-<%= link_to "Agregar sucursal", new_cliente_sucursale_path(@cliente) %>
+<%= link_to "Agregar sucursal", new_cliente_sucursale_path(@cliente), class: "btn btn-primary shadow" %>
+<%= link_to "Volver a clientes", clientes_path, class: "btn btn-secondary shadow" %>
 
-<div>
-
-
-  <%= link_to "Edit this cliente", edit_cliente_path(@cliente) %> |
-  <%= link_to "Back to clientes", clientes_path %>
-
-  <%#= button_to "Destroy this cliente", @cliente, method: :delete %>
-</div>
