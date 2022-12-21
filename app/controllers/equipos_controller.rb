@@ -25,7 +25,7 @@ class EquiposController < ApplicationController
 
     respond_to do |format|
       if @equipo.save
-        format.html { redirect_to equipo_url(@equipo), notice: "Equipo was successfully created." }
+        format.html { redirect_to equipo_url(@equipo), notice: "Equipo creado." }
         format.json { render :show, status: :created, location: @equipo }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -38,7 +38,7 @@ class EquiposController < ApplicationController
   def update
     respond_to do |format|
       if @equipo.update(equipo_params)
-        format.html { redirect_to equipo_url(@equipo), notice: "Equipo was successfully updated." }
+        format.html { redirect_to equipo_url(@equipo), notice: "Equipo modificado." }
         format.json { render :show, status: :ok, location: @equipo }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -52,7 +52,7 @@ class EquiposController < ApplicationController
     @equipo.destroy
 
     respond_to do |format|
-      format.html { redirect_to equipos_url, notice: "Equipo was successfully destroyed." }
+      format.html { redirect_to equipos_url, notice: "Equipo eliminado." }
       format.json { head :no_content }
     end
   end

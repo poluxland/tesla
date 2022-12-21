@@ -25,7 +25,7 @@ class ReportesController < ApplicationController
 
     respond_to do |format|
       if @reporte.save
-        format.html { redirect_to reporte_url(@reporte), notice: "Reporte was successfully created." }
+        format.html { redirect_to reporte_url(@reporte), notice: "Reporte creado." }
         format.json { render :show, status: :created, location: @reporte }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -38,7 +38,7 @@ class ReportesController < ApplicationController
   def update
     respond_to do |format|
       if @reporte.update(reporte_params)
-        format.html { redirect_to reporte_url(@reporte), notice: "Reporte was successfully updated." }
+        format.html { redirect_to reporte_url(@reporte), notice: "Reporte actualizado." }
         format.json { render :show, status: :ok, location: @reporte }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -52,7 +52,7 @@ class ReportesController < ApplicationController
     @reporte.destroy
 
     respond_to do |format|
-      format.html { redirect_to reportes_url, notice: "Reporte was successfully destroyed." }
+      format.html { redirect_to reportes_url, notice: "Reporte eliminado." }
       format.json { head :no_content }
     end
   end
