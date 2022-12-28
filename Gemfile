@@ -52,6 +52,8 @@ gem "bootsnap", require: false
 # gem "image_processing", "~> 1.2"
 gem 'simple_form'
 gem 'rqrcode'
+gem 'devise'
+
 
 
 group :development, :test do

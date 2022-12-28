@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  devise_for :users, controllers: {
+        sessions: 'users/sessions'
+      }
   resources :reportes
   resources :equipos
 
@@ -14,3 +17,5 @@ resources :sucursales, only: %i[destroy show edit update]
   root "pages#home"
   get 'graficos', to: 'pages#graficos'
 end
+
+
