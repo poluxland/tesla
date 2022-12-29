@@ -1,11 +1,8 @@
-
 <div class="modal modal-tour position-static d-block py-5" tabindex="-1" role="dialog" id="modalTour">
   <div class="modal-dialog" role="document">
-    <div class="modal-content rounded-4 shadow">
+    <div class="modal-content rounded-4 shadow-lg">
       <div class="modal-body p-5">
       <%= image_tag ("logo.svg")%>
-
-
        <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo: false }) do |f| %>
         <div class="form-inputs pt-3">
           <%= f.input :email,
@@ -22,27 +19,4 @@
         <div class="form-actions">
           <%= f.button :submit, "Ingresar", class: "btn btn-primary shadow mb-2 mt-2" %><br>
           <%= render "devise/shared/links" %>
-
- <% if notice %>
-  <p class="alert alert-success"><%= notice %></p>
 <% end %>
-<% if alert %>
-  <p class="alert alert-danger"><%= alert %></p>
-<% end %>
-
-
-
-        </div>
-<br>
-<% end %>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-
-
-
-

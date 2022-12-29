@@ -12,11 +12,13 @@
 
   <body>
      <div class="container">
-<%= render "devise/shared/error_messages", resource: resource %>
-
-    <%= yield %>
+      <%= yield %>
+      <%= render 'shared/alerts' %>
     </div>
 
 
+
+
   </body>
+
 </html>
