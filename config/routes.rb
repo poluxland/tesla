@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users, controllers: {
-        sessions: 'users/sessions'
-      }
+  devise_for :users
   resources :reportes
   resources :equipos
 
@@ -17,5 +15,3 @@ resources :sucursales, only: %i[destroy show edit update]
   root "pages#home"
   get 'graficos', to: 'pages#graficos'
 end
-
-
