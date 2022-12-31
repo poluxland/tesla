@@ -1,0 +1,8 @@
+wb = xlsx_package.workbook
+
+wb.add_worksheet(name: "Sucursale") do |sheet|
+  sheet.add_row ['Rut', 'Nombre', 'Dirección', 'Contacto', 'Creado']
+  @sucursales.each do |sucursale|
+    sheet.add_row [sucursale.cliente.rut, sucursale.nombre, sucursale.direccion, sucursale.contacto, sucursale.created_at]
+  end
+end

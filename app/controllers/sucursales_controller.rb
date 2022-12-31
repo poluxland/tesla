@@ -4,11 +4,28 @@ class SucursalesController < ApplicationController
 
   # GET /sucursales or /sucursales.json
   def index
-    @sucursales = Sucursale.all
+    respond_to do |format|
+      format.html do
+        @sucursales = Sucursale.order(created_at: :desc)
+      end
+      format.xlsx do
+        @sucursales = Sucursale.all
+        render xlsx: 'sucursales', template: 'sucursales/planilla'
+      end
+    end
   end
 
   # GET /sucursales/1 or /sucursales/1.json
   def show
+     respond_to do |format|
+      format.html do
+        @sucursales = Sucursale.order(created_at: :desc)
+      end
+      format.xlsx do
+        @sucursales = Sucursale.all
+        render xlsx: 'sucursales', template: 'sucursales/planilla'
+      end
+    end
   end
 
   # GET /sucursales/new
@@ -21,7 +38,7 @@ class SucursalesController < ApplicationController
   def edit
   end
 
-  # POST /sucursales or /sucursales.json
+  # Sucursale /sucursales or /sucursales.json
   def create
     @cliente = Cliente.find(params[:cliente_id])
     @sucursale = Sucursale.new(sucursale_params)

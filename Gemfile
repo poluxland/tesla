@@ -53,6 +53,8 @@ gem "bootsnap", require: false
 gem 'simple_form'
 gem 'rqrcode'
 gem 'devise'
+gem 'caxlsx'
+gem 'caxlsx_rails'
 
 
 

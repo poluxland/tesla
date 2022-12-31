@@ -8,3 +8,9 @@
 
 <%= link_to "Nuevo cliente", new_cliente_path, class: "btn btn-primary shadow" %>
 <%= link_to "Volver a inicio", root_path, class: "btn btn-secondary shadow" %>
+
+<%#= link_to 'Descargar Excel', clientes_path(format: :xlsx), target: :_blank, class: "btn btn-secondary shadow" %>
+<%= link_to 'Descargar Clientes', clientes_path(format: :xlsx), data: {turbolinks: false}, class: "btn btn-secondary shadow" %>
+
+
+

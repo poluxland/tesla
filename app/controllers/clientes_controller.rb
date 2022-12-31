@@ -2,12 +2,22 @@ class ClientesController < ApplicationController
   before_action :set_cliente, only: %i[ show edit update destroy ]
 
   # GET /clientes or /clientes.json
+
   def index
-    @clientes = Cliente.all
+    respond_to do |format|
+      format.html do
+        @clientes = Cliente.order(created_at: :desc)
+      end
+      format.xlsx do
+        @clientes = Cliente.all
+        render xlsx: 'clientes', template: 'clientes/planilla'
+      end
+    end
   end
 
   # GET /clientes/1 or /clientes/1.json
   def show
+
   end
 
   # GET /clientes/new
