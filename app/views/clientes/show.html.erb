@@ -1,4 +1,4 @@
-<p style="color: green"><%= notice %></p>
+
 <h2>Cliente</h2>
 <%= render @cliente %>
 <%= link_to "Editar cliente", edit_cliente_path(@cliente), class: "btn btn-primary shadow" %>
@@ -26,9 +26,11 @@
         <td><%= sucursale.contacto %></td>
         <td><%= sucursale.created_at.strftime("%m/%d/%y") %></td>
         <td class="text-center">
+          <%= link_to "", new_equipo_path(sucursale_id: sucursale.id), class: "btn btn-sm btn-primary command-delete shadow p-1 rounded bi bi-folder-plus" %>
+
 
           <%= link_to "", sucursale_path(sucursale), data: {turbo_method: :delete, turbo_confirm: "Esta seguro?"}, class: 'btn btn-sm btn-danger command-edit shadow p-1 rounded bi-trash'%>
-          <%= link_to "", edit_sucursale_path(sucursale), class: "btn btn-sm btn-primary command-delete shadow p-1 rounded bi bi-pencil-square" %>
+          <%= link_to "", edit_sucursale_path(sucursale), class: "btn btn-sm btn-secondary command-delete shadow p-1 rounded bi bi-pencil-square" %>
         </td>
       </tr>
     <% end %>

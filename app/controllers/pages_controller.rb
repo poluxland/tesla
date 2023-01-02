@@ -9,4 +9,8 @@ class PagesController < ApplicationController
   def graficos
   end
 
+  def informes
+    @reportes = Reporte.all
+  end
+
 end

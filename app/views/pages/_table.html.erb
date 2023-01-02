@@ -1,0 +1,33 @@
+ <table id="myTable" class="table table-responsive table-bordered table-sm table-hover shadow" cellspacing="0" width="100%">
+  <thead>
+    <tr>
+      <th>Reporte</th>
+      <th>Cliente</th>
+      <th>Sucursal</th>
+      <th>Dirección</th>
+      <th>Unidad</th>
+      <th>Tipo</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @reportes.each do |reporte| %>
+      <tr>
+        <td><%= reporte.created_at.strftime("%m/%d/%y") %></td>
+        <td><%= reporte.sucursale.cliente.nombre %></td>
+        <td><%= reporte.sucursale.nombre %></td>
+        <td><%= reporte.sucursale.direccion %></td>
+        <td><%= reporte.equipo.unidad %></td>
+        <td><%= reporte.equipo.tipo %></td>
+
+        <td class="text-center">
+
+          <%= link_to '', reporte, class: 'btn btn-sm btn-secondary command-edit shadow p-1 rounded bi-binoculars-fill'%>
+
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<br>
