@@ -37,7 +37,7 @@
 </table>
 
 
-<button type="button" class="btn btn-primary">Nuevo reporte para este equipo</button>
+<%= link_to "Nuevo reporte para este equipo", new_reporte_path(equipo_id: equipo.id, sucursale_id: equipo.sucursale.id,cliente_id: equipo.sucursale.cliente.id), class: "btn btn-primary" %>
 <%= link_to "Volver a equipos", equipos_path, class: "btn btn-secondary shadow" %>
 
 
