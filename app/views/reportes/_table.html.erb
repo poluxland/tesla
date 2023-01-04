@@ -37,24 +37,24 @@
 
 
 <script type="text/javascript">
-  $(document).ready(function() {
-    $('#myTable').DataTable( {
-        "language": {
-            "lengthMenu": "_MENU_ registros por pagina",
-            "zeroRecords": "Nada encontrado",
-            "info": "Pagina _PAGE_ de _PAGES_",
-            "infoEmpty": "No hay registros disponibles",
-            "infoFiltered": "(filtrado de un total de _MAX_ registros)",
-            "search": "Buscar:",
-            "paginate": {
-            "first": "Primero",
-            "last": "Último",
-            "next": "Siguiente",
-            "previous": "Anterior"
-    }
 
-        }
+$(document).ready(function() {
+    var table = $('#myTable').DataTable( {
+        dom: 'Bfrtip',
+        buttons: [
+            'excel',
+            'csv',
+            'print',
+            'copy'
+        ],
+         language: {
+    url: "../es-ES.json",
+  },
+
+
+
     } );
 } );
+
 </script>
 
