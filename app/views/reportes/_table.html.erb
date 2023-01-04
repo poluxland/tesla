@@ -4,9 +4,9 @@
       <th>Reporte</th>
       <th>Cliente</th>
       <th>Sucursal</th>
-      <th>Dirección</th>
+      <th>Codigo</th>
       <th>Unidad</th>
-      <th>Tipo</th>
+      <th>Tiempo(m)</th>
       <th>Acciones</th>
     </tr>
   </thead>
@@ -17,9 +17,9 @@
         <td><%= reporte.created_at.strftime("%m/%d/%y") %></td>
         <td><%= reporte.sucursale.cliente.nombre %></td>
         <td><%= reporte.sucursale.nombre %></td>
-        <td><%= reporte.sucursale.direccion %></td>
+        <td><%= reporte.equipo.codigo %></td>
         <td><%= reporte.equipo.unidad %></td>
-        <td><%= reporte.equipo.tipo %></td>
+        <td><%= ((reporte.termino.to_i) - (reporte.incio.to_i)) / 60 %></td>
 
         <td class="text-center">
 

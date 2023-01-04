@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_12_27_193338) do
+ActiveRecord::Schema[7.0].define(version: 2023_01_04_151730) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -122,6 +122,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_27_193338) do
     t.integer "b3"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.datetime "incio"
+    t.datetime "termino"
     t.index ["cliente_id"], name: "index_reportes_on_cliente_id"
     t.index ["equipo_id"], name: "index_reportes_on_equipo_id"
     t.index ["sucursale_id"], name: "index_reportes_on_sucursale_id"
@@ -145,6 +147,10 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_27_193338) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "admin"
+    t.boolean "cliente"
+    t.boolean "tecnico"
+    t.integer "role"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

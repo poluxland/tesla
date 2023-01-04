@@ -8,12 +8,12 @@
   <div class="form-inputs">
     <%#= f.association :sucursale, label_method: :nombre, input_html: { value: params[:sucursale] } %>
     <%#= f.association :sucursale, label_method: :id, value_method: :id, input_html: { value: params[:sucursale_id] } %>
+    <%= f.input :codigo %>
     <%= f.input :sucursale_id, value_method: :id, label_method: :nombre, input_html: { value: params[:sucursale_id] }, as: :hidden %>
     <%= f.input :unidad, collection: ["AC", "Chiller", "VIN", "VEX", "Bba Calor", "Camara refrigeración", "Humidificadores", "Otros"] %>
     <%= f.input :tipo, collection:  ["Split", "Ventana", "VRV", "Compacto", "Otros"] %>
     <%= f.input :otros, collection:  ["Unidad interior", "Unidad exterior", "Varios unidades exteriores"]%>
-    <%= f.input :contacto, input_html: { value: params[:sucursale_id]} %>
-    <%= f.input :codigo %>
+    <%= f.input :contacto %>
     <%= f.input :observaciones %>
 
 

@@ -5,5 +5,6 @@
 
 <%= render "table", reporte: @reporte %>
 
-<%= link_to "Nuevo reporte", new_reporte_path, class: "btn btn-primary shadow" %>
+<%#= link_to "Nuevo reporte", new_reporte_path, class: "btn btn-primary shadow" %>
+<%= link_to 'Descargar reportes', reportes_path(format: :xlsx), data: {turbolinks: false}, class: "btn btn-secondary shadow" %>
 <%= link_to "Volver a inicio", root_path, class: "btn btn-secondary shadow" %>
