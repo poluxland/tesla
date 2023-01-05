@@ -2,12 +2,11 @@
   <thead>
     <tr>
       <th>Reporte</th>
-      <th>Servicio</th>
       <th>Cliente</th>
       <th>Sucursal</th>
       <th>Codigo</th>
       <th>Unidad</th>
-      <th>Tiempo(m)</th>
+      <th>Tiempo</th>
       <th>Acciones</th>
     </tr>
   </thead>
@@ -16,12 +15,11 @@
     <% @reportes.each do |reporte| %>
       <tr>
         <td><%= reporte.created_at.strftime("%m/%d/%y") %></td>
-        <td><%= reporte.servicio %></td>
         <td><%= reporte.sucursale.cliente.nombre %></td>
         <td><%= reporte.sucursale.nombre %></td>
         <td><%= reporte.equipo.codigo %></td>
         <td><%= reporte.equipo.unidad %></td>
-        <td><%= ((reporte.termino.to_i) - (reporte.incio.to_i)) / 60 %></td>
+        <td><%= (reporte.termino.to_i - reporte.incio.to_i) / 3600 / 24  %></td>
 
         <td class="text-center">
 
@@ -39,24 +37,24 @@
 
 
 <script type="text/javascript">
+  $(document).ready(function() {
+    $('#myTable').DataTable( {
+        "language": {
+            "lengthMenu": "_MENU_ registros por pagina",
+            "zeroRecords": "Nada encontrado",
+            "info": "Pagina _PAGE_ de _PAGES_",
+            "infoEmpty": "No hay registros disponibles",
+            "infoFiltered": "(filtrado de un total de _MAX_ registros)",
+            "search": "Buscar:",
+            "paginate": {
+            "first": "Primero",
+            "last": "Último",
+            "next": "Siguiente",
+            "previous": "Anterior"
+    }
 
-$(document).ready(function() {
-    var table = $('#myTable').DataTable( {
-        dom: 'Bfrtip',
-        buttons: [
-            'excel',
-            'csv',
-            'print',
-            'copy'
-        ],
-         language: {
-    url: "../es-ES.json",
-  },
-
-
-
+        }
     } );
 } );
-
 </script>
 

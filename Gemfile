@@ -55,7 +55,7 @@ gem 'rqrcode'
 gem 'devise'
 gem 'caxlsx'
 gem 'caxlsx_rails'
-
+gem 'administrate'
 
 
 group :development, :test do
