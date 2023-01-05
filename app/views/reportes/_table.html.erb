@@ -2,6 +2,7 @@
   <thead>
     <tr>
       <th>Reporte</th>
+      <th>Servicio</th>
       <th>Cliente</th>
       <th>Sucursal</th>
       <th>Codigo</th>
@@ -15,6 +16,7 @@
     <% @reportes.each do |reporte| %>
       <tr>
         <td><%= reporte.created_at.strftime("%m/%d/%y") %></td>
+        <td><%= reporte.servicio %></td>
         <td><%= reporte.sucursale.cliente.nombre %></td>
         <td><%= reporte.sucursale.nombre %></td>
         <td><%= reporte.equipo.codigo %></td>

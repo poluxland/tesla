@@ -7,6 +7,7 @@
     <%= f.input :cliente_id, input_html: { value: params[:cliente_id] }, as: :hidden %>
     <%= f.input :sucursale_id, input_html: { value: params[:sucursale_id]}, as: :hidden %>
     <%= f.input :equipo_id, input_html: { value: params[:equipo_id]}, as: :hidden %>
+    <%= f.input :servicio, label: "Tipo de servicio", collection: ["Reparación", "Mantención", "Visita técnica", "Garantía"] %>
     <%= f.input :incio, label: "Inicio" %>
     <%= f.input :termino %>
     <%= f.input :enchufes %>
@@ -76,7 +77,6 @@
     <%= f.input :coigo_qr %>
     <%= f.input :otros %>
     <%= f.input :fecha %>
-    <%= f.input :servicio %>
     <%= f.input :chiller_presion_agua %>
     <%= f.input :chiller_presion_agua_retorno %>
     <%= f.input :chiller_t_agua_suministrada %>

@@ -20,7 +20,7 @@
             <br></td>
           </tr>
         </table>
-        <h2>Servicio Nº <%= reporte.id %> <br> </h2><br>
+        <h2><%= reporte.servicio %> Nº <%= reporte.id %> <br> </h2><br>
       </td>
     </tr>
     <tr class="heading">
@@ -33,7 +33,7 @@
     <tr>
       <td><%= reporte.cliente.nombre %></td>
       <td><%= reporte.fecha %></td>
-      <td><%= reporte.equipo.unidad %></td>
+      <td><%= reporte.equipo.codigo %></td>
       <td></td>
     </tr>
 

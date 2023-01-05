@@ -10,9 +10,9 @@
     <%#= f.association :sucursale, label_method: :id, value_method: :id, input_html: { value: params[:sucursale_id] } %>
     <%= f.input :codigo %>
     <%= f.input :sucursale_id, value_method: :id, label_method: :nombre, input_html: { value: params[:sucursale_id] }, as: :hidden %>
-    <%= f.input :unidad, collection: ["AC", "Chiller", "VIN", "VEX", "Bba Calor", "Camara refrigeración", "Humidificadores", "Otros"] %>
-    <%= f.input :tipo, collection:  ["Split", "Ventana", "VRV", "Compacto", "Otros"] %>
-    <%= f.input :otros, collection:  ["Unidad interior", "Unidad exterior", "Varios unidades exteriores"]%>
+    <%= f.input :unidad, collection: ["AC", "VIN", "VEX", "Chiller", "Bba Calor", "VRV", "UMA", "Humidificadores", "Deshumidificadores", "Camara refrigeración", "Otros"] %>
+    <%= f.input :tipo, label: "AC indicar tipo", collection: ["Ventana", "Compacto", "Split muro", "Split ducto multiposicional", "Split ducto baja silueta", "Split piso/cielo", "Split cassette"] %>
+    <%= f.input :otros, label: "Chiller y VRV indicar unidades interiores y exteriores", collection: ["Unidad interior", "Unidad exterior", "Varios unidades exteriores"]%>
     <%= f.input :contacto %>
     <%= f.input :observaciones %>
 
