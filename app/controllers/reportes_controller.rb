@@ -4,6 +4,7 @@ class ReportesController < ApplicationController
   # GET /reportes or /reportes.json
   def index
     @reportes = Reporte.all
+    authorize @reportes
   end
 
   # GET /reportes/1 or /reportes/1.json
@@ -13,15 +14,18 @@ class ReportesController < ApplicationController
   # GET /reportes/new
   def new
     @reporte = Reporte.new
+    authorize @reportes
   end
 
   # GET /reportes/1/edit
   def edit
+    authorize @reportes
   end
 
   # POST /reportes or /reportes.json
   def create
     @reporte = Reporte.new(reporte_params)
+    authorize @reportes
 
     respond_to do |format|
       if @reporte.save
@@ -36,6 +40,7 @@ class ReportesController < ApplicationController
 
   # PATCH/PUT /reportes/1 or /reportes/1.json
   def update
+    authorize @reportes
     respond_to do |format|
       if @reporte.update(reporte_params)
         format.html { redirect_to reporte_url(@reporte), notice: "Reporte actualizado." }
@@ -49,6 +54,7 @@ class ReportesController < ApplicationController
 
   # DELETE /reportes/1 or /reportes/1.json
   def destroy
+    authorize @reportes
     @reporte.destroy
 
     respond_to do |format|
