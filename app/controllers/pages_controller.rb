@@ -10,7 +10,7 @@ class PagesController < ApplicationController
   end
 
   def informes
-    @reportes = Reporte.all
+    @reportes = Reporte.where(enchufes: "")
   end
 
 end
