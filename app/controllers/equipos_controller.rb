@@ -14,7 +14,7 @@ class EquiposController < ApplicationController
   # GET /equipos/new
   def new
     @equipo = Equipo.new
-    authorize @equipos
+
   end
 
   # GET /equipos/1/edit
@@ -24,7 +24,7 @@ class EquiposController < ApplicationController
   # POST /equipos or /equipos.json
   def create
     @equipo = Equipo.new(equipo_params)
-    authorize @equipos
+
 
     respond_to do |format|
       if @equipo.save
@@ -39,7 +39,7 @@ class EquiposController < ApplicationController
 
   # PATCH/PUT /equipos/1 or /equipos/1.json
   def update
-    authorize @equipos
+
     respond_to do |format|
       if @equipo.update(equipo_params)
         format.html { redirect_to equipo_url(@equipo), notice: "Equipo modificado." }
@@ -53,7 +53,7 @@ class EquiposController < ApplicationController
 
   # DELETE /equipos/1 or /equipos/1.json
   def destroy
-    authorize @equipos
+
     @equipo.destroy
 
     respond_to do |format|

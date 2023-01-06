@@ -2,12 +2,13 @@ class SucursalesController < ApplicationController
   before_action :set_sucursale, only: %i[ show edit update destroy ]
   rescue_from ActiveRecord::InvalidForeignKey, with: :invalid_foreign_key
 
+
   # GET /sucursales or /sucursales.json
   def index
     respond_to do |format|
       format.html do
         @sucursales = Sucursale.order(created_at: :desc)
-        authorize @sucursales
+
       end
       format.xlsx do
         @sucursales = Sucursale.all
@@ -33,7 +34,7 @@ class SucursalesController < ApplicationController
   def new
     @cliente = Cliente.find(params[:cliente_id])
     @sucursale = Sucursale.new
-    authorize @sucursales
+
   end
 
   # GET /sucursales/1/edit
@@ -43,7 +44,7 @@ class SucursalesController < ApplicationController
   # Sucursale /sucursales or /sucursales.json
   def create
     @cliente = Cliente.find(params[:cliente_id])
-    authorize @sucursales
+
     @sucursale = Sucursale.new(sucursale_params)
     @sucursale.cliente = @cliente
     if @sucursale.save
@@ -56,7 +57,7 @@ class SucursalesController < ApplicationController
 
   # PATCH/PUT /sucursales/1 or /sucursales/1.json
   def update
-    authorize @sucursales
+
     respond_to do |format|
       if @sucursale.update(sucursale_params)
         format.html { redirect_to cliente_path(@sucursale.cliente), notice: "Sucursal actualizada." }
@@ -70,7 +71,7 @@ class SucursalesController < ApplicationController
 
   # DELETE /sucursales/1 or /sucursales/1.json
   def destroy
-    authorize @sucursales
+
     @sucursale.destroy
       redirect_to cliente_path(@sucursale.cliente), notice: "Sucursal eliminada."
   end
