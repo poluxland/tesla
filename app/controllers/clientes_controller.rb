@@ -7,7 +7,7 @@ class ClientesController < ApplicationController
     respond_to do |format|
       format.html do
         @clientes = Cliente.order(created_at: :desc)
-
+        authorize @clientes
       end
       format.xlsx do
         @clientes = Cliente.all
@@ -24,17 +24,20 @@ class ClientesController < ApplicationController
   # GET /clientes/new
   def new
     @cliente = Cliente.new
+    authorize @cliente
+
 
   end
 
   # GET /clientes/1/edit
   def edit
-
+    authorize @cliente
   end
 
   # POST /clientes or /clientes.json
   def create
     @cliente = Cliente.new(cliente_params)
+    authorize @cliente
 
 
     respond_to do |format|
@@ -50,7 +53,7 @@ class ClientesController < ApplicationController
 
   # PATCH/PUT /clientes/1 or /clientes/1.json
   def update
-
+    authorize @cliente
     respond_to do |format|
       if @cliente.update(cliente_params)
         format.html { redirect_to cliente_url(@cliente), notice: "Cliente modificado." }
@@ -64,7 +67,7 @@ class ClientesController < ApplicationController
 
   # DELETE /clientes/1 or /clientes/1.json
   def destroy
-
+    authorize @cliente
     @cliente.destroy
 
     respond_to do |format|
