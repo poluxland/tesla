@@ -1,13 +1,6 @@
 Rails.application.routes.draw do
-  namespace :admin do
-      resources :sucursales
-      resources :reportes
-      resources :equipos
-      resources :clientes
-      resources :users
 
-      root to: "sucursales#index"
-    end
+
   devise_for :users
   resources :reportes
   resources :equipos
