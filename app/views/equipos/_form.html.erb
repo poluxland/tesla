@@ -11,10 +11,11 @@
     <%= f.input :codigo %>
     <%= f.input :sucursale_id, value_method: :id, label_method: :nombre, input_html: { value: params[:sucursale_id] }, as: :hidden %>
     <%= f.input :unidad, collection: ["AC Ventana", "AC Compacto", "AC Split muro", "AC Split ducto multiposicional", "AC Split ducto baja silueta", "AC Split piso/cielo", "AC Split cassette", "VIN", "VEX", "Chiller", "Bba Calor", "VRV", "UMA", "Humidificadores", "Deshumidificadores", "Camara refrigeración", "Otros"] %>
-    <%= f.input :tipo, label: "tipo" %>
-    <%= f.input :otros, label: "Chiller y VRV indicar unidades interiores y exteriores", collection: ["Unidad interior", "Unidad exterior", "Varios unidades exteriores"]%>
-    <%= f.input :contacto %>
+    <%= f.input :tipo, label: "Marca" %>
+    <%= f.input :otros, label: "Modelo"%>
+    <%= f.input :contacto, label: "Numero de serie" %>
     <%= f.input :observaciones %>
+    <%= f.input :ubicacion %>
 
 
   </div>

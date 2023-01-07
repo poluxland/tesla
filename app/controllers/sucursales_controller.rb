@@ -85,7 +85,7 @@ class SucursalesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def sucursale_params
-      params.require(:sucursale).permit(:cliente_id, :nombre, :direccion, :contacto)
+      params.require(:sucursale).permit(:cliente_id, :nombre, :direccion, :contacto, :supervisor)
     end
 
     def invalid_foreign_key

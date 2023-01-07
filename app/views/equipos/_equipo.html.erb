@@ -7,12 +7,13 @@
       <th>Nombre cliente</th>
       <th>Sucursal</th>
       <th>Unidad</th>
-      <th>Tipo</th>
-      <th>Contacto</th>
-      <th>Otros</th>
       <th>Codigo</th>
-      <th>Creado</th>
+      <th>Marca</th>
+      <th>Serie</th>
+      <th>Modelo</th>
+      <th>Ingresado</th>
       <th>Observaciones</th>
+      <th>Ubicación</th>
     </tr>
   </thead>
 
@@ -23,14 +24,14 @@
         <td><%= equipo.sucursale.cliente.nombre %></td>
         <td><%= equipo.sucursale.nombre %></td>
         <td><%= equipo.unidad  %></td>
+        <td><%= equipo.codigo %></td>
         <td><%= equipo.tipo %></td>
         <td><%= equipo.contacto %></td>
         <td><%= equipo.otros %></td>
-        <td><%= equipo.codigo %></td>
         <td><%= equipo.created_at.strftime("%m/%d/%y") %></td>
-         <td><%= equipo.observaciones %></td>
-        <td class="text-center">
-        </td>
+        <td><%= equipo.observaciones %></td>
+        <td><%= equipo.ubicacion %></td>
+
       </tr>
 
   </tbody>

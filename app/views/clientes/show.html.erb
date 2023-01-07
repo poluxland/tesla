@@ -12,7 +12,8 @@
       <th>Nombre</th>
       <th>Dirección</th>
       <th>Contacto</th>
-      <th>Creado</th>
+      <th>Supervisor</th>
+      <th>Ingresado</th>
       <th>Acciones</th>
     </tr>
   </thead>
@@ -24,6 +25,7 @@
         <td><%= sucursale.nombre %></td>
         <td><%= sucursale.direccion %></td>
         <td><%= sucursale.contacto %></td>
+         <td><%= sucursale.supervisor %></td>
         <td><%= sucursale.created_at.strftime("%m/%d/%y") %></td>
         <td class="text-center">
           <%= link_to "", new_equipo_path(sucursale_id: sucursale.id), class: "btn btn-sm btn-primary command-delete shadow p-1 rounded bi bi-folder-plus" %>
