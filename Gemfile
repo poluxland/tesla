@@ -55,8 +55,8 @@ gem 'rqrcode'
 gem 'devise'
 gem 'caxlsx'
 gem 'caxlsx_rails'
-
 gem "pundit"
+gem 'rails_admin'
 
 
 group :development, :test do
@@ -82,3 +82,4 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+gem "sassc-rails"
