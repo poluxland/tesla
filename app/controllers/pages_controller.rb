@@ -10,7 +10,8 @@ class PagesController < ApplicationController
   end
 
   def informes
-    @reportes = Reporte.where(enchufes: "")
+    @reportes = Reporte.includes(equipo: :sucursale).where(sucursales: {contacto: current_user.email}).or(Reporte.includes(equipo: :sucursale).where(sucursales: {supervisor: current_user.email}))
   end
 
 end
+
