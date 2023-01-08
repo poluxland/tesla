@@ -9,6 +9,9 @@ class EquiposController < ApplicationController
 
   # GET /equipos/1 or /equipos/1.json
   def show
+    @reportes = Reporte.where({equipo_id: params[:id]}).last(5)
+
+
   end
 
   # GET /equipos/new
