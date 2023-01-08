@@ -1,43 +1,38 @@
 
-<div class="invoice-box" style="min-height:900px;">
+<div class="invoice-box" style="min-height:600px;">
   <table cellpadding="0" cellspacing="0">
     <tr class="top">
       <td colspan="4">
-        <table>
-          <tr><td class="title"><img src="/logo.svg" style="width:100%; max-width:80px;"></td>
-            <td>
-        </table>
-      </td>
+
     </tr>
-    <tr class="information">
-      <td colspan="4">
+    <tr>
+      <td colspan="5">
         <table>
           <tr>
-            <td>Tesla<br> Almirante Barroso 640<br> Valparaiso</td>
-            <td>+56 32 259 1548 <i class="bi bi-telephone-fill"></i>
-            <br>info@tesla.cl <i class="bi bi-envelope-at"></i>
-            <br>www.tesla.cl <i class="bi bi-browser-chrome"></i>
-            <br></td>
+            <td><img src="/logo.svg" style="width:100%; max-width:80px;"><br><i class="bi bi-envelope-at"></i> info@tesla.cl<br><i class="bi bi-browser-chrome"></i> www.tesla.cl<br><i class="bi bi-telephone-fill"></i> +56 32 259 1548</td>
+            <td><%= render_qr_code_mini("").html_safe %></td>
           </tr>
         </table>
-        <h2><%= reporte.servicio %> Nº <%= reporte.id %> <br> </h2><br>
+        <h2><%= reporte.servicio %> Nº <%= reporte.id %> <br> </h2>
       </td>
     </tr>
     <tr class="heading">
       <td>Cliente</td>
+      <td>Sucursal</td>
       <td>Fecha</td>
-      <td>Serie equipo</td>
-      <td>Actualización</td>
+      <td>Codigo</td>
+      <td>Tipo</td>
     </tr>
-
     <tr>
       <td><%= reporte.cliente.nombre %></td>
+      <td><%= reporte.sucursale.nombre %></td>
       <td><%= reporte.fecha %></td>
       <td><%= reporte.equipo.codigo %></td>
-      <td></td>
+      <td><%= reporte.equipo.unidad %></td>
     </tr>
-
     </table>
+
+
     <table>
     <br>
     <tr class="heading">
@@ -45,187 +40,207 @@
       <td>Estado</td>
       <td>Chequeo dinamico</td>
       <td>Estado</td>
+      <td></td>
     </tr>
-    <tr class="item">
-      <td >Enchufes</td>
+    <tr>
+      <td>Enchufes</td>
       <td><%= reporte.enchufes %></td>
       <td>Partida normal:</td>
       <td><%= reporte.partida_normal %></td>
     </tr>
-    <tr class="item">
+    <tr>
       <td>Cables</td>
       <td><%= reporte.cables %></td>
       <td>Vibraciones y ruido:</td>
       <td><%= reporte.vibraciones_y_ruido %></td>
     </tr>
-    <tr class="item">
+    <tr>
       <td>Conecciones:</td>
       <td><%= reporte.conecciones %></td>
       <td>Luces e indicacdores:</td>
       <td><%= reporte.luces_e_indicadores %></td>
     </tr>
-    <tr class="item">
+    <tr>
       <td>Estructura:</td>
       <td><%= reporte.estructura %></td>
       <td>Direccion de ventiladores:</td>
       <td><%= reporte.direccion_de_ventiladores %></td>
     </tr>
-    <tr class="item">
+    <tr>
       <td>Corrosion:</td>
       <td><%= reporte.corrosion %></td>
       <td>Nivel de aceite:</td>
       <td><%= reporte.nivel_de_aceite %></td>
     </tr>
-    <tr class="item">
+    <tr>
       <td>Bases:</td>
       <td><%= reporte.bases %></td>
       <td>Nivel de refrigerante:</td>
       <td><%= reporte.nivel_de_refrigerante %></td>
     </tr>
-    <tr class="item">
+    <tr>
       <td>Ventiladores:</td>
       <td><%= reporte.ventiladores %></td>
       <td>Pruebas de funcionamiento:</td>
       <td><%= reporte.pruebas_de_funcionamiento %></td>
     </tr>
-    <tr class="item">
+    <tr>
       <td>Condensador:</td>
       <td><%= reporte.condensador %></td>
       <td>Alarmas:</td>
       <td><%= reporte.alarmas %></td>
     </tr>
-    <tr class="item">
+    <tr>
       <td>Compresor:</td>
       <td><%= reporte.compresor %></td>
       <td>Sobrecalor:</td>
       <td><%= reporte.sobrecalor %></td>
     </tr>
-    <tr class="item">
+    <tr>
       <td>Evapodador:</td>
       <td><%= reporte.evaporador %></td>
       <td>Presion de succion:</td>
       <td><%= reporte.presion_de_succion %></td>
     </tr>
-    <tr class="item">
+    <tr>
       <td>Linea refrigetante:</td>
       <td><%= reporte.linea_refrigerante %></td>
       <td>Sobrecalentamiento:</td>
       <td><%= reporte.sobrecalentamiento %></td>
     </tr>
-    <tr class="item">
+    <tr>
       <td>Aislacion:</td>
       <td><%= reporte.aislacion %></td>
       <td>Presion de descarga:</td>
       <td><%= reporte.presion_de_descarga %></td>
     </tr>
-    <tr class="item">
+    <tr>
       <td>Correas:</td>
       <td><%= reporte.correas %></td>
       <td>Tarjeta de control:</td>
       <td><%= reporte.tarjeta_de_control %></td>
     </tr>
-    <tr class="item">
+    <tr>
       <td>Lubricacion:</td>
       <td><%= reporte.lubricacion %></td>
+      <td><strong>Gases (kg) / Aceite (l)</strong></td>
+      <td><%= reporte.b1 %> - <%= reporte.b2 %></td>
+
     </tr>
-    <tr class="item">
+    <tr>
       <td>Drenajes:</td>
-      <td><%= reporte.id %></td>
-
-
+      <td><%= reporte.otros %></td>
+      <td>Chiller presion de agua S-R</td>
+      <td><%= reporte.chiller_presion_agua%> - <%= reporte.chiller_presion_agua_retorno %></td>
 
     </tr>
-    <tr class="item">
+    <tr>
       <td>Filtro de aire:</td>
       <td><%= reporte.filtro_de_aire %></td>
-
-
+      <td>Chiller tº agua S-R</td>
+      <td><%= reporte.chiller_t_agua_suministrada%> - <%= reporte.chiller_t_agua_retorno %></td>
     </tr>
-    <tr class="item">
+    <tr>
       <td>Carcasa:</td>
       <td><%= reporte.carcasa %></td>
+      <td>Caudal chiller S-R</td>
+      <td><%= reporte.chiller_caudal_suministrado%> - <%= reporte.chiller_caudal_retorno %></td>
     </tr>
-
     <tr class="heading">
       <td>Parametros de lectura</td>
       <td>F1</td>
       <td>F2</td>
       <td>F3</td>
+      <td>M&#8486;</td>
     </tr>
-
-    <tr class="item">
-      <td>Compresor<%= reporte.compresor_f1 %></td>
+    <tr>
+      <td>Compresor</td>
+      <td><%= reporte.compresor_f1 %></td>
       <td><%= reporte.compresor_f2 %></td>
       <td><%= reporte.compresor_f3 %></td>
       <td><%= reporte.compresor_m %></td>
     </tr>
-    <tr class="item">
-      <td>Ventilador compresor<%= reporte.ventilador_compresor_f1 %></td>
+    <tr>
+      <td>Ventilador compresor</td>
+      <td><%= reporte.ventilador_compresor_f1 %></td>
       <td><%= reporte.ventilador_compresor_f2 %></td>
       <td><%= reporte.ventilador_compresor_f3 %></td>
       <td><%= reporte.ventilador_compresor_m %></td>
     </tr>
-    <tr class="item">
-      <td>Ventilador evaporador<%= reporte.ventilador_evaporador_inyeccion_f1 %></td>
+    <tr>
+      <td>Ventilador evaporador</td>
+      <td><%= reporte.ventilador_evaporador_inyeccion_f1 %></td>
       <td><%= reporte.ventilador_evaporador_inyeccion_f2 %></td>
       <td><%= reporte.ventilador_evapodar_f3 %></td>
       <td><%= reporte.ventilador_evaporador_m %></td>
     </tr>
-    <tr class="item">
-      <td>Ventilador retorno<%= reporte.ventilador_retorno_f1 %></td>
+    <tr>
+      <td>Ventilador retorno</td>
+      <td><%= reporte.ventilador_retorno_f1 %></td>
       <td><%= reporte.ventilador_retorno_f2 %></td>
       <td><%= reporte.ventilador_retorno_f3 %></td>
       <td><%= reporte.ventilador_retorno_m %></td>
     </tr>
-    <tr class="item">
-      <td>Calefactor<%= reporte.calefactor_f1 %></td>
+    <tr>
+      <td>Calefactor</td>
+      <td><%= reporte.calefactor_f1 %></td>
       <td><%= reporte.calefactor_f2 %></td>
       <td><%= reporte.calefactor_f3 %></td>
       <td><%= reporte.calefactor_m %></td>
     </tr>
-    <tr class="item">
-      <td>Tension total<%= reporte.tension_total_f1 %></td>
+    <tr>
+      <td>Tension total</td>
+      <td><%= reporte.tension_total_f1 %></td>
       <td><%= reporte.tension_total_f2 %></td>
       <td><%= reporte.tension_total_f3 %></td>
       <td><%= reporte.tension_total_m %></td>
-
     </tr>
+  </table>
 
-
-
-<!--
-    <tr class="heading"><td colspan="4">Observaciones</td></tr>
-    <tr class="details">
-    </tr>
-      <br>
-      <tr class="item">
-        <td>Imagen 1<%= reporte.imagen_1 %></td>
-        <td>Imagen 2<%= reporte.imagen_2 %></td>
-        <td>Imagen 3<%= reporte.imagen_3 %></td>
-        <td>Codigo QR<%= reporte.coigo_qr %></td>
-
-      </tr>
-      <tr class="item">
-        <td>Otros<%= reporte.otros %></td>
-        <td><%= reporte.detalle %></td>
-        <td><%= reporte.insumos_repuestos %></td>
-        <td><%= reporte.firma_solicitante %></td>
-
-
-      </tr>
-      <td><%= reporte.firma_tecnico %></td>
-      <td><%= reporte.servicio %></td>
-      <tr class="item">
-
-//-->
-      </tr>
+  <table>
+      <thead>
+        <tr class="heading">
+          <td>Detalles</td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><%= reporte.detalle %></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+  </table>
+<table>
+      <thead>
+        <tr class="heading">
+          <td>Insumos y Repuestos</td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><%= reporte.insumos_repuestos %></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+  </table>
+</div>
 
 
 
 </div>
 
-  </table>
-<br>
+
+
 
 <style>
 
