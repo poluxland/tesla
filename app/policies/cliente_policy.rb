@@ -1,25 +1,25 @@
 class ClientePolicy < ApplicationPolicy
   def index?
-    user.tecnico?
+    user.cliente?
   end
 
   def new?
-    user.tecnico?
+    user.cliente?
   end
 
   def create?
-    user.tecnico?
+    user.cliente?
   end
 
   def edit?
-    user.tecnico?
+    user.cliente?
   end
 
   def update?
-    user.tecnico?
+    user.cliente?
   end
 
   def destroy?
-    user.tecnico?
+    user.cliente?
   end
 end
