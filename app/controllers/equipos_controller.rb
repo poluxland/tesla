@@ -75,6 +75,6 @@ class EquiposController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def equipo_params
-      params.require(:equipo).permit(:sucursale_id, :unidad, :tipo, :contacto, :otros, :codigo, :observaciones, :ubicacion)
+      params.require(:equipo).permit(:sucursale_id, :unidad, :tipo, :contacto, :otros, :codigo, :observaciones, :ubicacion, :refrigerante)
     end
 end

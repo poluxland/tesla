@@ -7,6 +7,10 @@
       <th>Codigo</th>
       <th>Unidad</th>
       <th>Tiempo(m)</th>
+      <th>Gas(Kg)</th>
+      <th>Aceite(l)</th>
+      <th>Repuestos</th>
+      <th>Tecnico</th>
       <th>Acciones</th>
     </tr>
   </thead>
@@ -20,6 +24,11 @@
         <td><%= reporte.equipo.codigo %></td>
         <td><%= reporte.equipo.unidad %></td>
         <td><%= ((reporte.termino - reporte.incio) / 60).to_i  %></td>
+        <td><%= reporte.b1 %></td>
+        <td><%= reporte.b2 %></td>
+        <td><%= reporte.insumos_repuestos %></td>
+        <td><%= reporte.a2 %></td>
+
 
         <td class="text-center">
 
