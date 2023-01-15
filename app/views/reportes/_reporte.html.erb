@@ -19,17 +19,34 @@
     <tr class="heading">
       <td>Cliente</td>
       <td>Sucursal</td>
+      <td>Dirección</td>
+      <td>Rut</td>
       <td>Fecha</td>
-      <td>Codigo</td>
-      <td>Tipo</td>
+
     </tr>
     <tr>
       <td><%= reporte.cliente.nombre %></td>
       <td><%= reporte.sucursale.nombre %></td>
+      <td><%= reporte.sucursale.direccion %></td>
+      <td><%= reporte.cliente.rut %></td>
       <td><%= reporte.fecha %></td>
+
+    </tr>
+    <tr class="heading">
+      <td>Equipo</td>
+      <td>Tipo</td>
+      <td>Marca</td>
+      <td>Modelo</td>
+      <td>Serie</td>
+    </tr>
+    <tr>
       <td><%= reporte.equipo.codigo %></td>
       <td><%= reporte.equipo.unidad %></td>
+      <td><%= reporte.equipo.tipo %></td>
+      <td><%= reporte.equipo.otros %></td>
+      <td><%= reporte.equipo.contacto %></td>
     </tr>
+
     </table>
 
 
