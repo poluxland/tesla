@@ -14,7 +14,7 @@
   <tbody>
     <% @reportes.each do |reporte| %>
       <tr>
-        <td><%= reporte.created_at.strftime("%m/%d/%y") %></td>
+        <td><%= reporte.created_at.strftime("%Y/%m/%d") %></td>
         <td><%= reporte.sucursale.cliente.nombre %></td>
         <td><%= reporte.sucursale.nombre %></td>
         <td><%= reporte.sucursale.direccion %></td>

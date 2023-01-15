@@ -15,7 +15,7 @@
         <td><%= cliente.rut %></td>
         <td><%= cliente.nombre %></td>
         <td><%= cliente.direccion %></td>
-        <td><%= cliente.created_at.strftime("%m/%d/%y") %></td>
+        <td><%= cliente.created_at.strftime("%Y/%m/%d") %></td>
         <td class="text-center">
 
           <%= link_to '', cliente, class: 'btn btn-sm btn-secondary command-edit shadow p-1 rounded bi-binoculars-fill'%>
