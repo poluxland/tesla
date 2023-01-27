@@ -1,16 +1,36 @@
 
-
+<div class="noprint">
 <%= render @equipo %>
 
-<div>
-  <%#= link_to "Edit this equipo", edit_equipo_path(@equipo) %>
-  <%#= link_to "Back to equipos", equipos_path %>
-  <%#= button_to "Destroy this equipo", @equipo, method: :delete %>
-</div>
-
+<br>
 <br>
 <h2>Ultimas revisiones</h2>
-<%= render "history" %>
 
+<%= render "history" %>
+</div>
+
+
+</div>
+<%= image_tag ("logo.svg")%>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <%= render_qr_code("").html_safe %>
 <br>
+<br>
+<div class="noprint">
+<%= link_to "Imprimir codigo", '#', class: "btn btn-primary shadow m-1", onclick: "printpage()" %>
+
+</div>
+<style>
+
+  @media print {
+      .noprint,.botones, .alert, .header
+       {
+        display: none !important;
+      }
+</style>
+<script>
+  function printpage()
+  {
+     window.print()
+  }
+
+</script>
