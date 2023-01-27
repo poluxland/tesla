@@ -26,3 +26,24 @@
   </tbody>
 </table>
 <br>
+<script type="text/javascript">
+
+$(document).ready(function() {
+    var table = $('#myTable').DataTable( {
+        dom: 'Bfrtip',
+        buttons: [
+            'excel',
+            'csv',
+            'print',
+            'copy'
+        ],
+         language: {
+    url: "../es-ES.json",
+  },
+
+
+
+    } );
+} );
+
+</script>
