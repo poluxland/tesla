@@ -9,7 +9,7 @@
     <%#= f.association :sucursale, label_method: :nombre, input_html: { value: params[:sucursale] } %>
     <%#= f.association :sucursale, label_method: :id, value_method: :id, input_html: { value: params[:sucursale_id] } %>
     <%= f.input :codigo %>
-    <%= f.input :unidad, collection: ["AC Ventana", "AC Compacto", "AC Split muro", "AC Split ducto multiposicional", "AC Split ducto baja silueta", "AC Split piso/cielo", "AC Split cassette", "VIN", "VEX", "Chiller", "Bba Calor", "VRV", "UMA", "Humidificadores", "Deshumidificadores", "Camara refrigeración", "Otros"] %>
+    <%= f.input :unidad, collection: ["AC Ventana", "AC Compacto", "AC Split muro", "AC Split ducto multiposicional", "AC Split ducto baja silueta", "AC Split piso/cielo", "AC Split cassette", "VIN", "VEX", "Chiller", "Bba Calor", "Bba de agua", "VRV", "UMA", "Humidificadores", "Deshumidificadores", "Camara refrigeración", "Otros"] %>
     <%= f.input :tipo, label: "Marca" %>
     <%= f.input :otros, label: "Modelo"%>
     <%= f.input :contacto, label: "Numero de serie" %>
