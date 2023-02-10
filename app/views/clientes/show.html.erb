@@ -44,3 +44,24 @@
 <%= link_to "Volver a clientes", clientes_path, class: "btn btn-secondary shadow" %>
 <%= link_to 'Descargar sucursales', sucursale_path(format: :xlsx), target: :_blank, class: "btn btn-secondary shadow" %>
 
+<script type="text/javascript">
+
+$(document).ready(function() {
+    var table = $('#myTable').DataTable( {
+        dom: 'Bfrtip',
+        buttons: [
+            'excel',
+            'csv',
+            'print',
+            'copy'
+        ],
+         language: {
+    url: "../es-ES.json",
+  },
+
+
+
+    } );
+} );
+
+</script>
