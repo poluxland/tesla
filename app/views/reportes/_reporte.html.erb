@@ -13,7 +13,7 @@
             <td><%= render_qr_code_mini("").html_safe %></td>
           </tr>
         </table>
-        <h2><%= reporte.servicio %> Nº <%= reporte.id %> <br> </h2>
+        <h2><br><%= reporte.servicio %> Nº <%= reporte.id %> <br> </h2>
       </td>
     </tr>
     <tr class="heading">
@@ -120,7 +120,7 @@
       <td><%= reporte.presion_de_succion %></td>
     </tr>
     <tr>
-      <td>Linea refrigetante:</td>
+      <td>Linea refrigerante:</td>
       <td><%= reporte.linea_refrigerante %></td>
       <td>Sobrecalentamiento:</td>
       <td><%= reporte.sobrecalentamiento %></td>
@@ -140,35 +140,42 @@
     <tr>
       <td>Lubricacion:</td>
       <td><%= reporte.lubricacion %></td>
-      <td><strong>Gases (kg) / Aceite (l)</strong></td>
-      <td><%= reporte.b1 %> - <%= reporte.b2 %></td>
+      <td><strong>Gases (kg)</strong></td>
+      <td><%= reporte.b1 %></td>
 
     </tr>
     <tr>
       <td>Drenajes:</td>
       <td><%= reporte.otros %></td>
-      <td>Chiller presion de agua S-R</td>
-      <td><%= reporte.chiller_presion_agua%> - <%= reporte.chiller_presion_agua_retorno %></td>
+      <td><strong>Aceite (l)</strong></td>
+      <td><%= reporte.b2 %></td>
 
     </tr>
     <tr>
       <td>Filtro de aire:</td>
       <td><%= reporte.filtro_de_aire %></td>
-      <td>Chiller tº agua S-R</td>
-      <td><%= reporte.chiller_t_agua_suministrada%> - <%= reporte.chiller_t_agua_retorno %></td>
+      <td>Chiller presion de agua S-R</td>
+      <td><%= reporte.chiller_presion_agua%> - <%= reporte.chiller_presion_agua_retorno %></td>
+
     </tr>
     <tr>
       <td>Carcasa:</td>
       <td><%= reporte.carcasa %></td>
+      <td>Chiller tº agua S-R</td>
+      <td><%= reporte.chiller_t_agua_suministrada%> - <%= reporte.chiller_t_agua_retorno %></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
       <td>Caudal chiller S-R</td>
       <td><%= reporte.chiller_caudal_suministrado%> - <%= reporte.chiller_caudal_retorno %></td>
     </tr>
     <tr class="heading">
       <td>Parametros de lectura</td>
-      <td>F1</td>
-      <td>F2</td>
-      <td>F3</td>
-      <td>M&#8486;</td>
+      <td>F1 (Amp)</td>
+      <td>F2 (Amp)</td>
+      <td>F3 (Amp)</td>
+      <td>(M-&#8486;)</td>
     </tr>
     <tr>
       <td>Compresor</td>
@@ -198,20 +205,7 @@
       <td><%= reporte.ventilador_retorno_f3 %></td>
       <td><%= reporte.ventilador_retorno_m %></td>
     </tr>
-    <tr>
-      <td>Calefactor</td>
-      <td><%= reporte.calefactor_f1 %></td>
-      <td><%= reporte.calefactor_f2 %></td>
-      <td><%= reporte.calefactor_f3 %></td>
-      <td><%= reporte.calefactor_m %></td>
-    </tr>
-    <tr>
-      <td>Tension total</td>
-      <td><%= reporte.tension_total_f1 %></td>
-      <td><%= reporte.tension_total_f2 %></td>
-      <td><%= reporte.tension_total_f3 %></td>
-      <td><%= reporte.tension_total_m %></td>
-    </tr>
+
   </table>
 
   <table>
