@@ -114,7 +114,7 @@
       <td><%= reporte.sobrecalor %></td>
     </tr>
     <tr>
-      <td>Evapodador:</td>
+      <td>Evaporador:</td>
       <td><%= reporte.evaporador %></td>
       <td>Tarjeta de control:</td>
       <td><%= reporte.tarjeta_de_control %></td>
@@ -165,8 +165,8 @@
       <td><%= reporte.chiller_t_agua_suministrada%> - <%= reporte.chiller_t_agua_retorno %></td>
     </tr>
     <tr>
-      <td></td>
-      <td></td>
+      <td> Tension total(Volt)</td>
+      <td><%= reporte.tension_total_m%></td>
       <td>Caudal chiller S-R</td>
       <td><%= reporte.chiller_caudal_suministrado%> - <%= reporte.chiller_caudal_retorno %></td>
     </tr>
@@ -198,13 +198,7 @@
       <td><%= reporte.ventilador_evapodar_f3 %></td>
       <td><%= reporte.ventilador_evaporador_m %></td>
     </tr>
-    <tr>
-      <td>Ventilador retorno</td>
-      <td><%= reporte.ventilador_retorno_f1 %></td>
-      <td><%= reporte.ventilador_retorno_f2 %></td>
-      <td><%= reporte.ventilador_retorno_f3 %></td>
-      <td><%= reporte.ventilador_retorno_m %></td>
-    </tr>
+
 
   </table>
 
@@ -225,7 +219,7 @@
           <td></td>
         </tr>
       </tbody>
-  </table>
+</table>
 <table>
       <thead>
         <tr class="heading">
@@ -243,7 +237,25 @@
           <td></td>
         </tr>
       </tbody>
-  </table>
+</table>
+<table>
+      <thead>
+        <tr class="heading">
+          <td>Observaciones</td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><%= reporte.a1 %></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+</table>
 </div>
 
 
@@ -258,7 +270,7 @@
     .invoice-box {
     max-width: 900px;
     margin: auto;
-    padding: 20px;
+    padding: 30px;
     border: 1px solid #eee;
     box-shadow: 0 0 10px rgba(0, 0, 0, .15);
     font-size: 12px;

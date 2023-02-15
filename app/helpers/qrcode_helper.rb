@@ -21,7 +21,7 @@ svg = qrcode.as_svg(
 svg = qrcode.as_svg(
   color: "000",
   shape_rendering: "crispEdges",
-  module_size: 3,
+  module_size: 2.5,
   standalone: true,
   use_path: true
 )
