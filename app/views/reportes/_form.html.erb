@@ -37,8 +37,8 @@
     <%= f.input :alarmas, collection: ["OK", "DMG"], selected: "OK" %>
     <%= f.input :sobrecalor, collection: ["OK", "DMG"], selected: "OK" %>
     <%= f.input :sobrecalentamiento, collection: ["OK", "DMG"], selected: "OK" %>
-    <%= f.input :presion_de_succion, collection: ["OK", "DMG"], selected: "OK" %>
-    <%= f.input :presion_de_descarga, collection: ["OK", "DMG"], selected: "OK" %>
+    <%= f.input :presion_de_succion, as: :numeric %>
+    <%= f.input :presion_de_descarga, as: :numeric %>
     <%= f.input :tarjeta_de_control, collection: ["OK", "DMG"], selected: "OK" %>
     <%= f.input :compresor_f1, label: "Compresor f1(Amp)" %>
     <%= f.input :compresor_f2, label: "Compresor f2(Amp)" %>
@@ -68,8 +68,7 @@
     <%= f.input :tension_total_f2 %>
     <%= f.input :tension_total_f3 %>
     <%#= f.input :tension_total_m %>
-    <%= f.input :detalle %>
-    <%= f.input :insumos_repuestos %>
+
     <%= f.input :chiller_presion_agua, as: :numeric, label: "Chiller presion agua (BAR)" %>
     <%= f.input :chiller_presion_agua_retorno, as: :numeric, label: "Chiller presion agua retorno (BAR)" %>
     <%= f.input :chiller_t_agua_suministrada, as: :numeric, label: "Chiller Temp agua suninistro (ºC)" %>
@@ -84,6 +83,8 @@
     <%= f.input :b1, label: "Gases" %>
     <%= f.input :b2, label: "Aceite" %>
     <%#= f.input :fecha %>
+    <%= f.input :detalle %>
+    <%= f.input :insumos_repuestos %>
   </div>
 <br>
   <div class="form-actions">
