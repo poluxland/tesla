@@ -10,10 +10,10 @@
         <table>
           <tr>
             <td><img src="/logo.svg" style="width:100%; max-width:80px;"><br><i class="bi bi-envelope-at"></i> info@tesla.cl<br><i class="bi bi-browser-chrome"></i> www.tesla.cl<br><i class="bi bi-telephone-fill"></i> +56 32 259 1548</td>
-            <td><%= render_qr_code_mini("").html_safe %></td>
+            <td><%= render_qr_code_mini("").html_safe %><br><strong><%= reporte.servicio %> Nº <%= reporte.id %></strong> <br></td>
           </tr>
         </table>
-        <h2><br><%= reporte.servicio %> Nº <%= reporte.id %> <br> </h2>
+        <h2> </h2>
       </td>
     </tr>
     <tr class="heading">
