@@ -9,7 +9,9 @@
 <div class="botones">
   <div class="d-flex justify-content-center">
     <%= link_to "Imprimir", '#', class: "btn btn-primary shadow m-1", onclick: "printpage()" %>
-    <%= link_to 'Reportes sucursal', reportes_path(sucursale_id: @reporte.sucursale_id), class: "btn btn-success shadow m-1" %>
+
+    <%= link_to 'Equipos sucursal', equipos_sucursal_path(sucursale_id: @reporte.sucursale.id), class: "btn btn-success shadow m-1" %>
+
     <%= link_to "Volver", reportes_path, class: "btn btn-secondary shadow m-1" %>
 
 
