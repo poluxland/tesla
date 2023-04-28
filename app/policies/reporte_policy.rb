@@ -12,11 +12,11 @@ class ReportePolicy < ApplicationPolicy
   end
 
   def edit?
-    user.tecnico?
+    user.admin?
   end
 
   def update?
-    user.tecnico?
+    user.admin?
   end
 
   def destroy?
