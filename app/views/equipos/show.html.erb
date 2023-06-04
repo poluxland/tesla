@@ -15,17 +15,57 @@
 <%= render_qr_code("").html_safe %><br>
 <h4><%= @equipo.codigo %></h4>
 
-<br>
-<br>
 <div class="noprint">
 <%= link_to "Imprimir codigo", '#', class: "btn btn-primary shadow m-1", onclick: "printpage()" %>
 
 </div>
 
-<% if @equipo.id == 421 %>
-  Equipo 421
-<% end %>
+<br>
 
+<% if @equipo.id == 421 %>
+
+<%= link_to "Ver plano tablero", "/tablero.pdf", class: "btn btn-primary" %>
+
+
+<iframe src="/tablero.pdf" width="100%" height="500px"></iframe>
+<iframe src="/plano.pdf" width="100%" height="500px"></iframe>
+<iframe src="/circuitos.pdf" width="100%" height="500px"></iframe>
+
+
+<br>
+<h2>Fotografias</h2>
+<div class="row">
+  <div class="col-md-6">
+    <%= image_tag("BBA1.jpg", alt: "Circuito 4", class: "w-50") %>
+  </div>
+  <div class="col-md-6">
+    <%= image_tag("BB2.jpg", alt: "Circuito 4", class: "w-50") %>
+  </div>
+  <br>
+</div>
+<br>
+
+<h2>Circuitos</h2>
+<div class="row">
+
+  <div class="col-md-12">
+    <%= image_tag("circuitos1.jpg", alt: "Circuito 1") %>
+  </div>
+  <div class="col-md-12">
+    <%= image_tag("circuitos2.jpg", alt: "Circuito 2") %>
+  </div>
+  <div class="col-md-12">
+    <%= image_tag("circuitos3.jpg", alt: "Circuito 3") %>
+  </div>
+  <div class="col-md-12">
+    <%= image_tag("circuitos4.jpg", alt: "Circuito 4") %>
+  </div>
+</div>
+
+
+
+
+<% end %>
 
 
 <style>
